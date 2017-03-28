@@ -237,11 +237,7 @@
 		var wave = document.createElement("span");
 		wave.className += " wave";
 		docFrag.appendChild(wave);
-		// wave.style.left = ;
-		// wave.style.top = "0px";
-		// wave.style.zIndex = "1";
-		// wave.style.webkitAnimationDelay = (i / 100) + "s";
-        wave.style.cssText += "left:" + i * waveWidth + "px;top:0px;zIndex:1;webkitAnimationDelay:" + (i / 70) + "s";
+        wave.style.cssText += "left:" + i * waveWidth + "px;top:0px;zIndex:1;animation-delay:" + (i / 100) + "s";
 	}
 	ocean.appendChild(docFrag);
 </script>

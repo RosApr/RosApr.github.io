@@ -6,24 +6,24 @@
   font-style: normal;
 }
 .wave {
-      display: inline-block;
-      background-color: #a8e3ff;
-      height: 40%;
-      width: 10px;
-      position: absolute;
-      -webkit-animation: autoWave 3s ease-in-out infinite;
-      -o-animation: autoWave 3s ease-in-out infinite;
-      animation: autoWave 3s ease-in-out infinite;
-    }
+  display: inline-block;
+  background-color: #a8e3ff;
+  height: 30%;
+  width: 10px;
+  position: absolute;
+  -webkit-animation: autoWave 5s ease-in-out infinite;
+  -o-animation: autoWave 5s ease-in-out infinite;
+  animation: autoWave 5s ease-in-out infinite;
+}
 @keyframes autoWave {
   from {
-    height: 40%;
+    height: 30%;
   }
   50% {
-    height: 20%;
+    height: 5%;
   }
   to {
-    height: 40%;
+    height: 30%;
   }
 }
 a {
