@@ -891,7 +891,7 @@ header,
 }
 @media screen and (min-width: 992px) {
   .invisible-lt-sm {
-    display: block;
+    display: none;
   }
 }
 @media screen and (max-width: 991px) {
@@ -906,7 +906,7 @@ header,
 }
 @media screen and (max-width: 991px) {
   .visible-lt-sm {
-    display: block;
+    display: none;
   }
 }
 @media print {
