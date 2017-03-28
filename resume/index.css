@@ -889,22 +889,12 @@ header,
     margin-bottom: 5px;
   }
 }
-@media screen and (min-width: 992px) {
-  .invisible-lt-sm {
-    display: none;
-  }
-}
-@media screen and (max-width: 991px) {
-  .invisible-lt-sm {
-    display: none;
-  }
-}
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .visible-lt-sm {
-    display: none;
+    display: block;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
   .visible-lt-sm {
     display: none;
   }
