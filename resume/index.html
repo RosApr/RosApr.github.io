@@ -230,21 +230,20 @@
 <script type="text/javascript">
 	var ocean = document.getElementById("ocean"),
 		waveWidth = 10,
-		waveCount = Math.floor(window.innerWidth / waveWidth),
+		oceanWidth = ocean.clientWidth,
+		waveCount = Math.ceil(oceanWidth / waveWidth),
 		docFrag = document.createDocumentFragment();
 	for(var i = 0; i < waveCount; i++){
 		var wave = document.createElement("span");
 		wave.className += " wave";
 		docFrag.appendChild(wave);
-		wave.style.left = i * waveWidth + "px";
-		wave.style.top = "0px";
-		wave.style.zIndex = "1";
-		// wave.style.visibility = "hidden";
-		wave.style.webkitAnimationDelay = (i / 100) + "s";
+		// wave.style.left = ;
+		// wave.style.top = "0px";
+		// wave.style.zIndex = "1";
+		// wave.style.webkitAnimationDelay = (i / 100) + "s";
+        wave.style.cssText += "left:" + i * waveWidth + "px;top:0px;zIndex:1;webkitAnimationDelay:" + (i / 70) + "s";
 	}
 	ocean.appendChild(docFrag);
-	// console.log(document.querySelectorAll("#ocean .wave"));
-	// document.querySelectorAll("#ocean .wave").style.visibility = "visible";
 </script>
 <!--  block footer-->
 </html>
