@@ -250,13 +250,13 @@ dl {
   margin-right: -0.1px;
   overflow: hidden;
 }
-.row.ocean {
+/*.row.ocean {
   position: relative;
   overflow: hidden;
   background-image: -webkit-linear-gradient(bottom, #003296, #0096FF 50%);
   background-image: -o-linear-gradient(bottom, #003296 #0096FF 50%);    
   background-image: linear-gradient(bottom, #003296, #0096FF 50%);  
-}
+}*/
 .row.ocean figure,
 .row.ocean section,
 .row.ocean address {
