@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	var data = [{
+	  "province": "浙江",
+	  "city": "杭州",
+	  "name": "西湖"
+	},{
+	  "province": "浙江",
+	  "city": "杭州",
+	  "name": "东湖"
+	}, {
+	  "province": "四川",
+	  "city": "成都",
+	  "name": "锦里"
+	}, {
+	  "province": "四川",
+	  "city": "成都",
+	  "name": "方所"
+	}, {
+	  "province": "四川",
+	  "city": "阿坝",
+	  "name": "九寨沟"
+	}];
+	
+	var transObject = function(object, keys){
+
+		var hashTable = {}, res = [];
+		for(var i = 0, _len = object.length; i < _len; i++){
+			var arr = res, cur = hashTable;
+			for(var j = 0, __len = keys.length; j < __len; j++){
+				var key = keys[j], field = object[i][key];
+				if(!cur[field]){
+					var pusher = {
+						value: field
+					}, tmp;
+					if(j !== (__len - 1)){
+						tmp = [];
+						pusher.children = tmp;
+					}
+					cur[field] = { $$pos: arr.push(pusher) - 1 };
+					cur = cur[field];
+					arr = tmp;
+				}else{
+					cur = cur[field]
+					arr = arr[cur.$$pos].children
+				}
+			}
+		}
+		return [res,hashTable];
+
+	}
+	var d = transObject(data, ["province", "city", "name"]);
+</script>
+</html>
