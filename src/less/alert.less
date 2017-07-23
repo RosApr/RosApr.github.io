@@ -1,0 +1,61 @@
+.self-alert-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999999;
+  background-color: rgba(0,0,0,.7);
+}
+.self-alert-layer .inner-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 80%;
+  padding: 5% 5% 10%;
+  border-radius: 6rpx;
+}
+.self-alert-layer .inner-container .self-cont {
+  color: #000;
+  white-space: normal;
+  font-size: 32dpx;
+  margin-top: 8%;
+  text-align: center;
+}
+.self-alert-layer .inner-container .btn-container {
+  margin: 50px auto 0;
+}
+.self-alert-layer .inner-container .btn-container.alert .btn.cancel {
+  background-color: #ea5050;
+  width: 34%;
+  padding: 1% 0;
+}
+.self-alert-layer .inner-container .btn-container.confirm {
+  margin-top: 16%;
+}
+.self-alert-layer .inner-container .btn-container.confirm .inner {
+    display: table-cell;
+    width: 1%;
+}
+.self-alert-layer .inner-container .btn-container .btn {
+  color: #fff;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 34dpx;
+  padding: 6% 0;
+  border-radius: 6rpx;
+}
+.self-alert-layer .inner-container .btn-container.confirm .inner .btn.cancel {
+  background-color: #ea5050;
+}
+.self-alert-layer .inner-container .btn-container.confirm .inner .btn.commit {
+  background-color: #ea5050;
+}
+.self-hide {
+  display: none!important;
+  //visibility: hidden!important;
+}
