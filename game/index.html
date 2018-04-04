@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>gravity</title>
+	<style type="text/css">
+		* { padding: 0; margin: 0; }
+    	body { background-color: #000; } 
+    	canvas { background-color: #ddd; display: block; }
+	</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script type="text/javascript">
+	// state vars
+	var width = window.innerWidth, 
+		height = window.innerHeight, 
+		gra = .1, 
+		// springGra = .1,
+		frac = .01, 
+		radius = 10,
+		speed = 0, 
+		radians = 280*Math.PI/180, 
+		opacity = .3, 
+		count = 1000/30,
+		poiArr = [],
+		gameStatus = true,
+		rectagleHdis = 0,
+		collStatus = true,
+		touchX = 0,
+		tempX = 0,
+		stepY = [],
+		stepX = [],
+        ball_speed = -18,
+        tempCamera = 0,
+        score = 0;
+    // touch var
+    var mousePos = {};
+    // just height 
+    var scrollH = 832;
+    var step_width = 50, step_height = 30;
+    var cameraLine;
+    height>500 ? (cameraLine = 150,speed = 7) : (cameraLine = 100,speed = 6);
+	// create step
+	var bitY, bitX, stepConut;
+	height < 500 ? bitY = 40 : bitY = 60,stepConut = 7;
+	width < 330 ? bitX = 65 : bitX = 75,stepConut = 11;
+	for(var i=0;i<stepConut;i++){
+		stepY[i] = i*bitY,
+		stepX[i] = bitX*(Math.random()*3);
+        stepX[i] <= 10 && (stepX[i]+=Math.random()*10+11.1);
+        // stepX[i]+step_width>=width && (stepX[i]-=step_width+10);
+        stepX[i] + step_width >= width && (stepX[i] -= step_width*1.2);
+	}
+    console.log(stepY);
+	// get canvas dom
+	var canvas = document.getElementById("canvas"),ctx = canvas.getContext("2d");
+		canvas.width = width,
+		canvas.height = height;
+    var bg_img = new Image;
+    bg_img.src = "images/bg.jpg";
+    function drawScreen(){
+	    gameStatus && ((!canvas && canvas.getContext) || false);
+    	ctx.clearRect(0,0,width,height);
+	    // ctx.globalAlpha = opacity;
+        // console.log(score);
+        tempCamera = cameraLine - ball._nextY;
+        tempCamera < 1 ? tempCamera = 0 : score += tempCamera/5;
+        tempCamera > 37 && (tempCamera = 37);
+        //draw bg
+        ctx.drawImage(bg_img,0,bg._y,bg._width,bg._height,0,0,width*1.5,height);
+        bg._y -= tempCamera/23;
+        bg._y < 0 && (bg._y = 0);
+        // draw ball's trail
+        // drawTrail();
+    	// draw step
+    	for(var _i=stepConut - 1;_i>0;_i--){
+    		ctx.beginPath();
+    		ctx.fillStyle="yellow";
+            stepY[_i] += tempCamera;
+    		ctx.fillRect(stepX[_i],stepY[_i],step_width,step_height);
+            stepY[_i] > 3*height/4 && (stepY[_i] -= height,stepX[_i]>80 && (stepX[_i] = width-stepX[_i]));
+    	}
+        // console.log(ball_speed);
+    	// draw ball
+    	ctx.beginPath();
+        ctx.arc(ball._nextX,ball._nextY,ball._r,0,Math.PI*2,false);
+        tempX > 0 ?(ctx.fillStyle = "blue") : (ctx.fillStyle = "red");
+        //tempX > 0 ?(ball._vY>0?ctx.fillStyle = "blue":ctx.fillStyle = "orange") : (ball._vY>0?ctx.fillStyle = "red":ctx.fillStyle = "orange");
+        ctx.closePath();
+        ctx.fill();
+        //draw spring
+        ctx.beginPath();
+    	ctx.fillStyle = spring._bg;
+		ctx.fillRect(0,spring._y,spring._width,spring._height);
+        ctx.closePath();
+    	ctx.fill();
+        // mark ball' move trail
+        // var poi = { x:ball._nextX,y:ball._nextY,r:2 };
+      	// poiArr.push(poi);
+      	// fresh ball is X
+      	//is brillent for use iteration here
+    	tempX = touchX - ball._x;
+    	ball._nextX = (ball._x += tempX / 15);
+    	//ball's v in X have friction
+		// set collision status true		
+    	collStatus = true;
+    	// set max speed
+    	// Math.abs(ball._yUnit)>7 && (ball._yUnit<0?ball._yUnit=-6:ball._yUnit=6);
+      	// ball._yUnit += gra;
+      	// console.log("ball._yUnit="+ball._yUnit);
+      	// ball._vY = ball._yUnit;
+        //
+        // console.log(ball._nextY);
+        ball._nextY = ball._y+=ball_speed+tempCamera;
+        ball_speed += .6;
+        ball_speed>8 && (ball_speed=8);
+        //
+        // ball._nextY = (ball._y+=ball._vY);
+        // when ball move down, watch the collision between spring and ball
+        (ball_speed>0)&&(ball._nextY+ball._r >= spring._nextY)&&(ball_speed = -15,collStatus = false,spring._yUnit = 4);
+        // when ball move down judge its collision with steps
+        if(ball_speed>2){
+            //get ball low position in Y
+        	var a = ball._nextY + ball._r;
+        	for(var _j=0;_j<stepConut;_j++){
+                /*judge issues:
+                    1.ball right line over step poisition in X
+                    2.ball left line in step poistion in X add its widh
+                    3.judge ball position in Y whether is in a field which is step in Y +-ball._r
+                */
+        		if(ball._nextX+ball._r>stepX[_j] && ball._nextX-ball._r<stepX[_j]+step_width && stepY[_j]-ball._r<a && a<stepY[_j]+ball._r){
+        			a<=stepY[_j] && (ball_speed = -12,stepY[_j] -= height);
+        		}
+			}
+        }
+        // when game first in ,draw spring and is not confict with ball's collision logic
+        if(gameStatus){
+        	//just coming once
+    		spring._yUnit += gra;
+    		spring._Vy = spring._yUnit;
+    		gameStatus = false;
+        }
+        //when collision is happan ,then set spring's height to start self's change
+        //when collision is no hanppen yet , just draw spring as rule
+        //collStatus default value is true,when collision is happening ,collStatus is change to false
+        if(collStatus){
+      		spring._yUnit += gra*.5;
+        	spring._Vy = spring._yUnit;
+        }else{
+        	score<50?spring._nextY = spring._y = height*.91:console.log("gameOver!");
+        }
+		// watch spring position in Y
+        if(score<=50){
+            if(spring._nextY <= height*.9){
+                // spring is static
+                spring._nextY = spring._y = height*.9
+            }else if(spring._nextY > height*.9 && spring._nextY<height){
+                //  spring is moving
+                spring._nextY = (spring._y+=spring._Vy);
+            }else if(spring._nextY>=height){
+                spring._yUnit = -spring._yUnit;
+                //cause next spring is loop is in (spring._nextY > height*.9 && spring._nextY<height), so set spring 's next height is height*.99
+                spring._nextY = spring._y = height*.99999;
+            }
+        }else{
+            spring._nextY = spring._y = height+1;
+        }
+    }
+    function drawTrail(){
+    	!!poiArr.length || false;
+    	for(var __i=0,len_=poiArr.length;__i<len_;__i++){
+	      var point = poiArr[__i];
+	      ctx.beginPath();
+	      ctx.arc(point.x,point.y,point.r,0,Math.PI*2,false);
+	      ctx.fillStyle = "#000";
+	      ctx.closePath();
+	      ctx.fill();
+	    }
+    }
+    function Spring(){
+    	this._width = width,
+    	this._height = height/10,
+    	this._bg = "#000",
+    	this._Vy = speed,
+    	this._yUnit = Math.sin(280*Math.PI/180)*this._Vy*.6,
+    	this._y = height*.98,
+    	this._nextY = this._y;
+    }
+    function Point(){
+	    this._r = radius,
+	    this._x = width*(1/3),
+	    this._y = height,
+	    this._nextX = this._x,
+	    this._nextY = this._y,
+	    this._speed = speed,
+	    this._angle = radians,
+	    // init ball's x , y speed
+	    // this._xUnit = this._speed * Math.cos(this._angle),
+	    // this._xUnit = 0,
+	    this._yUnit = this._speed * Math.sin(this._angle),
+	    // this._vX = this._xUnit,
+	    this._vY = this._yUnit;
+    }
+    function Bg(){
+        this._yUint = 0;
+        this._vY = this._yUint;
+        this._y = scrollH;
+        this._nextY = this._y;
+        this._width = width;
+        this._height = 400;
+    }
+    // game init here
+    var ball = new Point();
+    touchX = ball._x;
+    var spring = new Spring();
+    var bg = new Bg();
+    drawScreen();
+    setInterval(function(){
+    	drawScreen()
+    },count);
+    // 绑定触摸事件
+	canvas.addEventListener("touchstart", touchStart, !1);
+	canvas.addEventListener("touchend", touchEnd, !1);
+	canvas.addEventListener("touchmove", touchMove, !1);
+	canvas.addEventListener("touchcancel", deleteEvent, !1);
+	// 绑定手势事件
+	canvas.addEventListener("gesturestart", deleteEvent, !1);
+	canvas.addEventListener("gesturechange", deleteEvent, !1);
+	canvas.addEventListener("gestureend", deleteEvent, !1);
+	// 绑定鼠标点击事件
+	// canvas.addEventListener("mousedown", mouseDown, !1);
+	// canvas.addEventListener("mouseup", mouseUp, !1);
+	// canvas.addEventListener("mousemove", mouseMove, !1);
+// 	//mousedown
+// function mouseDown(e) {
+// 	mousePos = {
+// 		x: e.layerX,
+// 		y: e.layerY
+// 	};
+// 	e.preventDefault()
+// }
+// //mousemove
+// function mouseMove(e) {
+// 	mousePos = {
+// 		x: e.layerX,
+// 		y: e.layerY
+// 	};
+// }
+// //mouseup
+// function mouseUp(e) {
+// 	mousePos = {
+// 		x: e.layerX,
+// 		y: e.layerY
+// 	};
+// }
+//touchstart
+function touchStart(e) {
+	mousePos = {
+		x: e.touches[0].pageX,
+		y: e.touches[0].pageY
+	};
+	mv(mousePos);
+	e.preventDefault()
+}
+//touchmove
+function touchMove(e) {
+	mousePos = {
+		x: e.touches[0].pageX,
+		y: e.touches[0].pageY
+	};
+	mv(mousePos);
+	event.preventDefault()
+}
+//touchend
+function touchEnd(e) {
+	mousePos = {
+		x: e.changedTouches[0].pageX,
+		y: e.changedTouches[0].pageY
+	};
+	mv(mousePos);
+	e.preventDefault()
+}
+//touchcancel,gesturestart,gesturechange,gestureend
+function deleteEvent(e) {
+	e.preventDefault()
+}
+function mv(e) {
+	touchX = e.x - 8;
+	4 > touchX && (touchX = 4);
+	touchX > width && (touchX = width);
+}
+</script>
+</body>
+</html>
