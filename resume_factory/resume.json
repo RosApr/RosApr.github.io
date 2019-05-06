@@ -1,0 +1,305 @@
+{
+  "data_lang": "zh-CN",
+  "ga_id": "UA-63818301-2",
+  "resume_title": "杨小刚 - 个人简历",
+  "name": "杨小刚",
+  "repo": "",
+  "job_description": ["前端开发工程师"],
+  "contact": {
+    "email": "rosaprxg@gmail.com",
+    "wechat": {
+      "id": "Rosapr_",
+      "qrcode": "static/wechat.jpeg"
+    },
+    "github": {
+      "id": "RosApr"
+    }
+  },
+  "links": [{
+    "type": "repo",
+    "url": ""
+
+  }, {
+    "type": "pdf",
+    "url": "static/joyeecheung.pdf"
+
+  }],
+  "education": [{
+    "type": "undergraduate",
+    "name": "西安邮电大学",
+    "major": "信息安全",
+    "start": "2011",
+    "end": "2015",
+    "honor": [
+
+    ]
+  }],
+  "language": [{
+    "type": "english",
+    "certificate": [{
+      "type": "CET-4",
+      "full": "710",
+      "score": "439"
+    }, {
+      "type": "CET-6",
+      "full": "710",
+      "score": "431"
+    }],
+    "description": [
+      "能阅读英文API和英文技术博客",
+      "能够在英文邮件列表、Stack Overflow 等社区正常交流"
+    ]
+  }],
+  "experience": [{
+    "type": "internship",
+    "techtype": "frontend",
+    "place": "北京易扬信息技术有限公司",
+    "start": "2017.05",
+    "end": "至今",
+    "name": "前端开发工程师",
+    "description": [
+      "参与项目前端部分的开发与维护"
+    ],
+    "stack": ["react", "vue", "angular1.x"],
+    "compatibility": "IE9+"
+  },{
+    "type": "project",
+    "techtype": "frontend",
+    "project_type": "teamwork",
+    "name": "DSP",
+    "demo": "http://dsp.eyangmedia.com/#/site",
+    "description": [
+      "angular1.x",
+      "广告投放系统"
+    ],
+    "stack": ["jade", "less", "gulp"],
+    "compatibility": "IE9+"
+  },{
+    "type": "project",
+    "techtype": "frontend",
+    "project_type": "teamwork",
+    "name": "MDSP",
+    "demo": "http://mdsp.eyangmedia.com/",
+    "description": [
+      "vue",
+      "广告投放系统移动版"
+    ],
+    "stack": ["jade", "less", "gulp"],
+    "compatibility": "IE9+"
+  },{
+    "type": "project",
+    "techtype": "frontend",
+    "project_type": "teamwork",
+    "name": "TRACK",
+    "demo": "http://t.eyangmedia.com/#/login",
+    "description": [
+      "vue",
+      "广告投放监测系统"
+    ],
+    "stack": ["jade", "less", "gulp"],
+    "compatibility": "IE9+"
+  },{
+    "type": "project",
+    "techtype": "frontend",
+    "project_type": "teamwork",
+    "name": "微信小商城后台管理系统",
+    "demo": "http://wxmall.eyangmedia.com/#/dashboard",
+    "description": [
+      "react",
+      "前端有用wepy开发的小程序商城"
+    ],
+    "stack": ["jade", "less", "gulp"],
+    "compatibility": "IE9+"
+  },{
+    "type": "project",
+    "techtype": "frontend",
+    "project_type": "teamwork",
+    "name": "广告监测sdk-js版",
+    "demo": "",
+    "description": [
+      "js",
+      "广告监测sdk是类似google analytics的用户行为统计监测代码"
+    ],
+    "stack": ["jade", "less", "gulp"],
+    "compatibility": "IE9+"
+  }, {
+    "type": "internship",
+    "techtype": "frontend",
+    "place": "苏宁云商集团股份有限公司IT总部广告投放研发中心",
+    "start": "2015.04",
+    "end": "2017.05",
+    "name": "前端开发",
+    "description": [
+      "移动事业部"
+    ],
+    "stack": ["jqueryui", "bootstrap", "jquery", "grunt", "less"],
+    "compatibility": "IE8+"
+  },{
+    "type": "project",
+    "techtype": "frontend",
+    "project_type": "teamwork",
+    "name": "苏宁618，818，双12项目",
+    "description": [
+     "和总部同事进行项目沟通，h5游戏二次开发（混淆代码开发，游戏适配等问题）"
+    ],
+    "stack": ["jade", "less", "gulp"],
+    "compatibility": "IE9+"
+  },{
+    "type": "project",
+    "techtype": "frontend",
+    "project_type": "teamwork",
+    "name": "魔盒后台,各类活动游戏开发,h5页面开发",
+    "description": [
+     "o2o模式的app推广系统",
+     "后台管理系统开发（jQuery,Bootstrap,各类组件）"
+    ],
+    "stack": ["jade", "less", "gulp"],
+    "compatibility": "IE9+"
+  },{
+    "type": "project",
+    "techtype": "frontend",
+    "project_type": "teamwork",
+    "name": "璞富腾酒店预订系统",
+    "demo": "http://preferred.dragongap.cn/",
+    "description": [
+     "酒店类营销门户网站",
+     "使用jQuery及其依赖组件开发",
+     "使用less编译css(`IE8+`)",
+     "移动&web多端开发",
+     "在后端同事协助下，完成设计稿的高精度还原以及功能完整开发，参与后期系统测试，bug修复"
+    ],
+    "stack": ["jade", "less", "gulp"],
+    "compatibility": "IE9+"
+  },{
+    "type": "project",
+    "techtype": "frontend",
+    "project_type": "teamwork",
+    "name": "诺维真邮轮",
+    "demo": "http://www.goncl.cn/",
+    "description": [
+     "邮轮旅行",
+     "根据客户需求快速制作响应式活动推广页面(响应式)"
+    ],
+    "stack": ["jade", "less", "gulp"],
+    "compatibility": "IE9+"
+  },{
+    "type": "project",
+    "techtype": "frontend",
+    "project_type": "teamwork",
+    "name": "比佛利山庄官网开发",
+    "demo": "http://www.lovebeverlyhills.cn/",
+    "description": [
+     "旅游类、官网",
+     "响应式网站开发"
+    ],
+    "stack": ["jade", "less", "gulp"],
+    "compatibility": "IE9+"
+  },{
+    "type": "project",
+    "techtype": "frontend",
+    "project_type": "teamwork",
+    "name": "slh-h5游戏开发",
+    "demo": "http://www.slhhotels.cn/campaign/LuxurySecret/mobile/intro.html",
+    "description": [
+     "简单的h5游戏，",
+     "游戏开发&前后端数据交互"
+    ],
+    "stack": ["jade", "less", "gulp"],
+    "compatibility": "微信"
+  },{
+    "type": "project",
+    "techtype": "frontend",
+    "project_type": "teamwork",
+    "name": "项目维护",
+    "description": [
+     "项目的日常维护，需求开发，bug修改"
+    ],
+    "stack": ["jade", "less", "gulp"],
+    "compatibility": "IE9+"
+  }, {
+    "type": "project",
+    "techtype": "frontend",
+    "project_type": "teamwork",
+    "name": "福特项目,上海好耶广告有限公司",
+    "description": [
+     "福特主题页，门户网站",
+     "合作开发",
+     "使用gulp进行热监听，代码打包及压缩",
+     "pc端站点解决各类(`兼容IE8+`)兼容性问题",
+     "好耶官网",
+     "前后端完全分离,接口设计",
+     "前端部分的设计与开发(`独立开发`)",
+     "依赖jQuery,requireJs,模块化开发，页面优化（懒加载）"
+    ],
+    "stack": ["jade", "less", "gulp"],
+    "compatibility": "IE9+"
+  }, {
+    "type": "project",
+    "techtype": "frontend",
+    "project_type": "teamwork",
+    "name": "各类移动端活动",
+    "description": [
+     "h5小游戏二次开发及各类主题页制作",
+     "西安地铁运营号主题页开发（微信公众号：西安地铁运营号）"
+    ],
+    "stack": ["jade", "less", "gulp"],
+    "compatibility": "IE9+"
+  }],
+  "skills": [
+    {
+      "type": "selfAssessment",
+      "item": [
+        "具有极强的责任心，沟通及团队协作能力"
+        ]
+    }, {
+    "type": "frontend",
+    "item": [{
+      "summary": "`HTML` / `CSS`",
+      "description": [
+        "能够编写语义化的 `HTML`，模块化的 `CSS`，实现较复杂的布局与动画",
+        "熟悉已标准化的 `HTML5` / `CSS3` 新特性，实验项目中能尝试使用未广泛实现的新标准"
+      ]
+    }, {
+      "summary": "`ECMAScript`（`JavaScript`）",
+      "description": [
+        "熟悉 `ECMAScript`（`JavaScript`），对 `JavaScript 引擎`有一定的了解",
+        "了解 `ECMAScript` 新标准与相关后处理工具并能在项目中使用"
+      ]
+    }, {
+      "summary": "`DOM` / `BOM` 及常见 `Web API`",
+      "description": [
+        "熟悉原生 `DOM` 与 `BOM` 的使用及相关标准（W3C），有PC / 移动端前端组件的开发经验",
+        "熟悉常见的 Web API **兼容性**问题及其解决方案"
+      ]
+    }, {
+      "summary": "前端工程实践",
+      "description": [
+        "对`mv*`模型有一定了解",
+        "对 `vuejs` 模块化开发有一定经验， 编写过spa官网",
+        "熟悉 `jQuery` / `Bootstrap` 的使用、定制与扩展, 阅读过部分源代码",
+        "在项目中使用过 `Vue` / `Angular1.x` / `React` / `RequireJS` / `seajs` / `Bower` / `npm` 等多种模块化解决方案",
+        "日常使用 `Gulp` / `webpack` 辅助工作流",
+        "`git` / `svn` 进行代码管理",
+        "熟悉Linux工作环境",
+        "掌握前端兼容性处理、性能优化知识与技巧，并能在项目中加以实践",
+        "响应式开发，html5移动端页面开发"
+      ]
+    }]
+  }, {
+    "type": "backend",
+    "item": [{
+      "summary": "`Node.js`",
+      "description": [
+        "对nodeJs有一定了解，使用nodejs做过rss源的数据抓取及前端模版渲染",
+        "用eggjs开发一套完整的博客系统"
+      ]
+    }]
+  }, {
+    "type": "miscellaneous",
+    "item": [
+      "能够使用 `Markdown` 编写得体的中英文文档或论文，具备良好的技术交流能力",
+      "日常使用 `Sublime Text` / `vsCode` 进行开发，也乐于尝试新工具",
+      "能够根据页面设计效果图(psd) 熟练完成切图"
+      ]
+  }]
+}
