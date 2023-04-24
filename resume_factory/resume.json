@@ -51,10 +51,7 @@
           "score": "431"
         }
       ],
-      "description": [
-        "能阅读英文API和英文技术博客",
-        "能够在英文邮件列表、Stack Overflow 等社区正常交流"
-      ]
+      "description": ["良好的英文阅读能力"]
     }
   ],
   "experience": [
@@ -351,13 +348,6 @@
           ]
         },
         {
-          "summary": "`DOM` / `BOM` 及常见 `Web API`",
-          "description": [
-            "熟悉原生 `DOM` 与 `BOM` 的使用及相关标准（W3C），有PC / 移动端前端组件的开发经验",
-            "熟悉常见的 Web API **兼容性**问题及其解决方案"
-          ]
-        },
-        {
           "summary": "前端工程实践",
           "description": [
             "熟悉`mv*`模型",
@@ -387,8 +377,7 @@
     {
       "type": "miscellaneous",
       "item": [
-        "能够使用 `Markdown` 编写得体的中英文文档或论文，具备良好的技术交流能力",
-        "日常使用 `vsCode` 进行开发，也乐于尝试新工具",
+        "能够使用 `Markdown` 编写中英文文档，具备良好的技术交流能力",
         "能够根据页面设计效果图(psd) 熟练完成切图"
       ]
     }
