@@ -29,8 +29,7 @@ block experience
       li.timeline-item(class="experience-" + item.type)
         h3.timeline-title
           +#{"experience_title_" + item.type}(item)
-        dl.experience-description.timeline-content
-          +#{"experience_content_" + item.type}(item)
+
 
 block skills
   +section("skills", true)
@@ -39,6 +38,16 @@ block skills
         h3.timeline-title
           span.skills-type= skill_type[item.type]
         +#{"skills_" + item.type}(item)
+          
+
+block project
+  +section("project", true)
+    each item in project
+      li.timeline-item(class="experience-" + item.type)
+        h3.timeline-title
+          +#{"experience_title_" + item.type}(item)
+        dl.experience-description.timeline-content
+          +#{"experience_content_" + item.type}(item)
 
 
 //block links

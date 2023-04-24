@@ -1,7 +1,13 @@
 @font-face {
   font-family: 'FontAwesome';
-  src: url('static/fonts/fontawesome-webfont.eot?v=4.3.0');
-  src: url('static/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('static/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('static/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('static/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('static/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  src: url('./static/fonts/fontawesome-webfont.eot?v=4.3.0');
+  src: url('./static/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0')
+      format('embedded-opentype'),
+    url('./static/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'),
+    url('./static/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'),
+    url('./static/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'),
+    url('./static/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular')
+      format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -27,8 +33,8 @@ html {
 }
 body {
   color: #333;
-  background-color: #E0E0E0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #e0e0e0;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -295,7 +301,7 @@ header a:visited {
 }
 header a:hover,
 header a:active {
-  color: #A3D3D1;
+  color: #a3d3d1;
 }
 .contact-phone {
   padding-left: 28px;
@@ -307,7 +313,7 @@ header a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: "\f095";
+  content: '\f095';
   width: 28px;
   margin-left: -28px;
   display: inline-block;
@@ -322,7 +328,7 @@ header a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: "\f0e0";
+  content: '\f0e0';
   width: 28px;
   margin-left: -28px;
   display: inline-block;
@@ -337,7 +343,7 @@ header a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: "\f092";
+  content: '\f092';
   width: 28px;
   margin-left: -28px;
   display: inline-block;
@@ -352,7 +358,7 @@ header a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: "\f18a";
+  content: '\f18a';
   width: 28px;
   margin-left: -28px;
   display: inline-block;
@@ -367,7 +373,7 @@ header a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: "\f09e";
+  content: '\f09e';
   width: 28px;
   margin-left: -28px;
   display: inline-block;
@@ -382,7 +388,7 @@ header a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: "\f1d7";
+  content: '\f1d7';
   width: 28px;
   margin-left: -28px;
   display: inline-block;
@@ -435,7 +441,7 @@ section {
   text-align: center;
   line-height: 32px;
   font-size: 26px;
-  content: "\f092";
+  content: '\f092';
 }
 .timeline-wrapper {
   overflow-y: hidden;
@@ -459,7 +465,7 @@ section {
   text-align: center;
   line-height: 14px;
   font-size: 14px;
-  content: "";
+  content: '';
   margin-left: 17px;
   margin-top: -7px;
 }
@@ -504,7 +510,7 @@ section {
   text-align: center;
   line-height: 26px;
   font-size: 20px;
-  content: "\f02d";
+  content: '\f02d';
   margin-left: -47px;
   margin-top: -6px;
   position: absolute;
@@ -544,10 +550,10 @@ section {
   padding: 0;
 }
 .education .sec-title-wrapper::before {
-  content: "\f02d";
+  content: '\f02d';
 }
 .education-undergraduate.timeline-item::before {
-  content: "\f02e";
+  content: '\f02e';
 }
 .education-major {
   padding-left: 28px;
@@ -559,7 +565,7 @@ section {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: "\f19d";
+  content: '\f19d';
   width: 28px;
   margin-left: -28px;
   display: inline-block;
@@ -574,7 +580,7 @@ section {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: "\f091";
+  content: '\f091';
   width: 28px;
   margin-left: -28px;
   display: inline-block;
@@ -617,7 +623,7 @@ section {
   line-height: 1.4;
 }
 .language .sec-title-wrapper::before {
-  content: "\f086";
+  content: '\f086';
 }
 .language-desc-item {
   padding-left: 28px;
@@ -629,7 +635,7 @@ section {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: "\f005";
+  content: '\f005';
   width: 28px;
   margin-left: -28px;
   display: inline-block;
@@ -673,13 +679,13 @@ section {
   background-color: rgba(255, 255, 255, 0.8);
 }
 .experience .sec-title-wrapper::before {
-  content: "\f135";
+  content: '\f135';
 }
 .experience-internship.timeline-item::before {
-  content: "\f0b1";
+  content: '\f0b1';
 }
 .experience-project.timeline-item::before {
-  content: "\f135";
+  content: '\f135';
 }
 .experience-task {
   padding-left: 28px;
@@ -691,7 +697,7 @@ section {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: "\f013";
+  content: '\f013';
   width: 28px;
   margin-left: -28px;
   display: inline-block;
@@ -706,7 +712,7 @@ section {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: "\f0c1";
+  content: '\f0c1';
   width: 19px;
   margin-left: -19px;
   display: inline-block;
@@ -743,19 +749,19 @@ section {
   padding-bottom: 10px;
 }
 .skills .sec-title-wrapper::before {
-  content: "\f0ad";
+  content: '\f0ad';
 }
 .skills-frontend.timeline-item::before {
-  content: "\f12e";
+  content: '\f12e';
 }
 .skills-backend.timeline-item::before {
-  content: "\f0c2";
+  content: '\f0c2';
 }
 .skills-miscellaneous.timeline-item::before {
-  content: "\f085";
+  content: '\f085';
 }
 .skills-selfAssessment.timeline-item::before {
-  content: "\f007";
+  content: '\f007';
 }
 .skills-item-description {
   padding-left: 28px;
@@ -767,7 +773,7 @@ section {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: "\f005";
+  content: '\f005';
   width: 28px;
   margin-left: -28px;
   display: inline-block;

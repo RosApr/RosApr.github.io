@@ -108,5 +108,6 @@ mixin experience_title_project(item)
 mixin experience_content_project(item)
 
   dt.experience-project-name= item.name
+    dd.experience-task!= item.stack
   each desc in item.description
     dd.experience-task!= highlight(desc)
