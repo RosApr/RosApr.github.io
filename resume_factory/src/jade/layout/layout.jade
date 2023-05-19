@@ -1,4 +1,3 @@
-//include ../mixins/ga.jade
 
 doctype html
 <!--[if lte IE 8]>
@@ -12,6 +11,7 @@ head
   block title
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
   block style
+  script(type='text/javascript', src='../html2canvas.min.js')
   //if ga_id
   //  +ga(ga_id)
 
@@ -20,8 +20,21 @@ body
 
   block sidebar
   .container
-    main
+    main#main
       block header
       block content
+  input(type="button", id="toImg", value="to img",onclick="renderImg();")
+    
 //  block footer
+script.
+  var $ele = document.getElementById('toImg')
+  function renderImg() {
+    var $canvas = document.getElementsByTagName('canvas')
+    for(let ele of $canvas) {
+      document.body.removeChild(ele)
+    }
+    html2canvas(document.getElementById('main')).then(function(canvas) {
+      document.body.appendChild(canvas);
+  });
+  }
 |</html>
