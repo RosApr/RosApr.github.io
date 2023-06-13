@@ -14,8 +14,7 @@
     "phone": "18089210182",
     "github": {
       "id": "RosApr"
-    },
-    "phone": "18089210182"
+    }
   },
   "links": [
     {
@@ -61,7 +60,7 @@
       "techtype": "frontend",
       "place": "易扬(北京)信息技术有限公司",
       "start": "2017.05",
-      "end": "至今",
+      "end": "2023.05.22",
       "name": "前端开发工程师",
       "stack": ["react", "vue", "angular1.x"],
       "compatibility": "IE9+"
